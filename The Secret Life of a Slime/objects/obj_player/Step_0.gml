@@ -9,6 +9,14 @@ key_left = keyboard_check(vk_left);
 x_speed = (key_right - key_left) * move_spd;
 y_speed = (key_down - key_up) * move_spd;
 
+// set sprite direction	
+if(y_speed > 0) {face = DOWN;}
+if(y_speed < 0) {face = UP;}
+if(x_speed > 0) {face = RIGHT;}
+if(x_speed < 0) {face = LEFT;}
+sprite_index = sprite[face]
+
+// set collision
 if(place_meeting(x+x_speed, y, obj_solid)){
 	x_speed = 0;
 }
@@ -20,9 +28,7 @@ if(place_meeting(x, y+y_speed, obj_solid)){
 x += x_speed;
 y += y_speed;
 
-// set sprite 	
-if(y_speed > 0) {face = DOWN;}
-if(y_speed < 0) {face = UP;}
-if(x_speed > 0) {face = RIGHT;}
-if(x_speed < 0) {face = LEFT;}
-sprite_index = sprite[face]
+
+if(x_speed == 0 && y_speed == 0){
+	image_index = 0;
+}
