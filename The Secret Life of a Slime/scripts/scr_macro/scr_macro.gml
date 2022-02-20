@@ -7,5 +7,5 @@
 
 #macro HOME_X 835
 #macro HOME_Y 355
-#macro TOWN_X 50
-#macro TOWN_Y 355
+#macro TOWN_X 35
+#macro TOWN_Y 470

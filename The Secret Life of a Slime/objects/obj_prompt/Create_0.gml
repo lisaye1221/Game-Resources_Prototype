@@ -8,4 +8,4 @@ player_y = 0;
 // how much above the player the text would appear
 y_offset = 35;
 // to keep prompt text from going off screen
-RIGHT_BOUNDARY_SPACE = 50; 
+BOUNDARY_SPACE = 50; 

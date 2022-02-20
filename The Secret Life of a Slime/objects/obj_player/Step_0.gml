@@ -35,5 +35,8 @@ if(x_speed == 0 && y_speed == 0){
 
 // ** Interaction ** //
 if(place_meeting(x, y, obj_prompt_town) && key_z){
-	scr_town(self)
+	go_to_town(self);
+}
+if(place_meeting(x,y, obj_prompt_home) && key_z){
+	go_home(self);
 }
