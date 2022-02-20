@@ -1,16 +1,13 @@
 {
   "spriteId": {
-    "name": "spr_machine",
-    "path": "sprites/spr_machine/spr_machine.yy",
+    "name": "spr_actionable_vertical",
+    "path": "sprites/spr_actionable_vertical/spr_actionable_vertical.yy",
   },
   "solid": false,
   "visible": true,
   "spriteMaskId": null,
   "persistent": false,
-  "parentObjectId": {
-    "name": "obj_solid",
-    "path": "objects/obj_solid/obj_solid.yy",
-  },
+  "parentObjectId": null,
   "physicsObject": false,
   "physicsSensor": false,
   "physicsShape": 1,
@@ -27,11 +24,11 @@
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "solid_decor",
-    "path": "folders/Objects/solid_decor.yy",
+    "name": "prompts",
+    "path": "folders/Objects/prompts.yy",
   },
   "resourceVersion": "1.0",
-  "name": "obj_machine",
+  "name": "obj_prompt_town",
   "tags": [],
   "resourceType": "GMObject",
 }
