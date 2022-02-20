@@ -5,6 +5,7 @@ key_up = keyboard_check(vk_up);
 key_right = keyboard_check(vk_right);
 key_down = keyboard_check(vk_down);
 key_left = keyboard_check(vk_left);
+key_z = keyboard_check_pressed(ord("z"));
 
 x_speed = (key_right - key_left) * move_spd;
 y_speed = (key_down - key_up) * move_spd;

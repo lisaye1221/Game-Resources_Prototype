@@ -21,8 +21,8 @@
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "Objects",
-    "path": "folders/Objects.yy",
+    "name": "solid_decor",
+    "path": "folders/Objects/solid_decor.yy",
   },
   "resourceVersion": "1.0",
   "name": "obj_solid",
