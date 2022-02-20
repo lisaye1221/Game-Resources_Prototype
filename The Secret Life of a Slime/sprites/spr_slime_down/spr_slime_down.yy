@@ -82,7 +82,7 @@
   "nineSlice": null,
   "parent": {
     "name": "slime",
-    "path": "folders/Sprites/slime.yy",
+    "path": "folders/Sprites/player/slime.yy",
   },
   "resourceVersion": "1.0",
   "name": "spr_slime_down",
