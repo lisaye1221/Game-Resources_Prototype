@@ -3,7 +3,7 @@
   "solid": false,
   "visible": true,
   "spriteMaskId": null,
-  "persistent": true,
+  "persistent": false,
   "parentObjectId": null,
   "physicsObject": false,
   "physicsSensor": false,
@@ -25,11 +25,11 @@
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "Objects",
-    "path": "folders/Objects.yy",
+    "name": "prompts",
+    "path": "folders/Objects/prompts.yy",
   },
   "resourceVersion": "1.0",
-  "name": "obj_game_manager",
+  "name": "obj_prompt",
   "tags": [],
   "resourceType": "GMObject",
 }
