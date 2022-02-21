@@ -103,3 +103,11 @@ if(place_meeting(x, y, obj_use_machine) && key_z){
 		}
 	}
 }
+// berry bushes
+berry_bush_id = instance_place(x, y, obj_bush);
+if(berry_bush_id != noone && key_z && berry_bush_id.has_berries){
+	berry_bush_id.has_berries = false;
+	// TODO: add berry to inventory  
+}
+	
+
