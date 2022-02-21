@@ -20,3 +20,4 @@ sprite = slime_sprite
 face = DOWN;
 
 global.energy = 100;
+global.energy_max=100;

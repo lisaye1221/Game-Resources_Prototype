@@ -5,3 +5,5 @@
 global.time += 1/room_speed;
 // 60 seconds = 1 day
 global.days = floor(global.time / 60);
+// lose 0.1 energy per second
+global.energy -= 0.1/room_speed;
