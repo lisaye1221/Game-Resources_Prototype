@@ -40,3 +40,24 @@ if(place_meeting(x, y, obj_prompt_town) && key_z){
 if(place_meeting(x,y, obj_prompt_home) && key_z){
 	go_home(self);
 }
+if(place_meeting(x, y, obj_prompt_grow_crops) && key_z){
+	// checking to see if crops are done growing (if any one is done, all are)
+	if (instance_find(obj_crop,0).harvestable == true){
+		
+		// TODO: should we make this take time (time delay here?)
+		
+		
+		// adding crops to player's inventory & subtracting energy cost
+		global.wheat += 8;
+		global.energy -= 10;
+		
+		// resetting all crops in scene so they will grow again
+		for (var i = 0; i < instance_number(obj_crop); i ++;)
+		{
+		    with (instance_find(obj_crop,i)){
+				crop_growth_remaining = crop_growth_time;
+				harvestable = false;
+			}
+		}
+	}
+}

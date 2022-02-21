@@ -7,4 +7,5 @@ if(crop_growth_remaining > 0){
 }
 else{
 	image_index = image_number - 1;
+	harvestable = true;
 }

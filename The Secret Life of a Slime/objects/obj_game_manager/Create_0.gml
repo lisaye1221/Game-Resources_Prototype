@@ -7,10 +7,3 @@
 global.days = 0;
 // record how much time passed by
 global.time = 0;
-
-
-// vars for drawing energy bar
-energybar_width = 100;
-energybar_height = 12;
-
-//energybar_x = (320/2) - (draw_healthbar()

@@ -2,7 +2,9 @@
 // You can write your code in this editor
 
 is_show_prompt = false;
+show_alt = false;
 prompt_text = "";
+alt_prompt_text = "";
 player_x = 0;
 player_y = 0;
 // how much above the player the text would appear
