@@ -3,4 +3,4 @@
 
 event_inherited()
 prompt_text = "harvest crops? (10 energy)";
-alt_prompt_text = "the crops are still growing";
+alt_prompt_text1 = "the crops are still growing";

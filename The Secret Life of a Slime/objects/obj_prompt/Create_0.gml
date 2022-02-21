@@ -2,9 +2,11 @@
 // You can write your code in this editor
 
 is_show_prompt = false;
-show_alt = false;
+which_text = 0;		// 0 is prompt_text, 1 is alt_prompt_text1, 2 is alt_prompt_text2, and so on
 prompt_text = "";
-alt_prompt_text = "";
+alt_prompt_text1 = "";
+alt_prompt_text2 = "";
+alt_prompt_text3 = "";
 player_x = 0;
 player_y = 0;
 // how much above the player the text would appear

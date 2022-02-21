@@ -61,3 +61,45 @@ if(place_meeting(x, y, obj_prompt_grow_crops) && key_z){
 		}
 	}
 }
+if(place_meeting(x, y, obj_use_machine) && key_z){
+	
+	
+	// TODO: automatically takes all now, we could let player choose how much to convert
+		
+		
+	this_machine = instance_find(obj_machine, 0);
+	if (this_machine != noone){
+		// inputting wheat if they have any in inventory
+		if (this_machine.status == "empty" && global.wheat != 0){
+			// take wheat from player, start timer, show progress bar
+				
+			this_machine.amount_to_convert = global.wheat;
+			global.wheat = 0;
+			this_machine.status = "busy";
+			// change text
+		} 
+			
+		else if (this_machine.status == "busy"){
+			// do nothing
+		}
+			
+		// collecting wheat
+		else if (this_machine.status == "full"){
+			// take energy, disable progress bar, reset vars
+				
+			global.slime_energy = this_machine.amount_to_convert;
+			this_machine.status = "empty";
+			// change text
+		} 
+		
+		
+		// TODO: repairing machine
+		
+		
+		else if (this_machine.status == "broken"){
+			// do something (take gold or parts or whatever from player and wait for repair)
+			// change status to "empty"
+			// change text
+		}
+	}
+}

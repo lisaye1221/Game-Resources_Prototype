@@ -13,9 +13,18 @@ if(is_show_prompt){
 		x_pos = player_x
 	}
 	y_pos = player_y - y_offset < 0 ? 0 : player_y - y_offset;
-	if (show_alt){
-		draw_text(x_pos, y_pos, alt_prompt_text);
-	} else {
-		draw_text(x_pos, y_pos, prompt_text);
+	switch (which_text){
+		case 0:
+			draw_text(x_pos, y_pos, prompt_text);
+			break;
+		case 1:
+			draw_text(x_pos, y_pos, alt_prompt_text1);
+			break;
+		case 2:
+			draw_text(x_pos, y_pos, alt_prompt_text2);		
+			break;
+		case 3:
+			draw_text(x_pos, y_pos, alt_prompt_text3);		
+			break;
 	}
 }
