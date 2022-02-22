@@ -9,3 +9,12 @@ if (status == "busy"){
 		status = "full";
 	}
 }
+
+// activating full signal
+if (status == "full" && !full_signal){
+	instance_activate_object(obj_exclamation);
+	full_signal = true;
+} else if (status != "full" && full_signal){
+	instance_deactivate_object(obj_exclamation);
+	full_signal = false;
+}

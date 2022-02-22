@@ -8,6 +8,7 @@ status = "empty";
 amount_to_convert = 0;
 time_to_convert = 10;
 time_left = time_to_convert;
+full_signal = true;		// keep track of exclamation signal status
 
 WHEAT_COST = 8;
 JELLY_PRODUCED = 2;
