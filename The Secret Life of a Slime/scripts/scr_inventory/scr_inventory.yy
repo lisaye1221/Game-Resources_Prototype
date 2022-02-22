@@ -6,7 +6,7 @@
     "path": "folders/Scripts.yy",
   },
   "resourceVersion": "1.0",
-  "name": "scr_items_transactions",
+  "name": "scr_inventory",
   "tags": [],
   "resourceType": "GMScript",
 }

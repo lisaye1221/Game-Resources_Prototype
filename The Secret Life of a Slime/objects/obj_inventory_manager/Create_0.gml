@@ -4,52 +4,50 @@
 depth = -9999;
 
 // the max amount before it counts as a seperate item
-#macro FOOD_MAX 30
+#macro FOOD_MAX 24
 #macro SLIME_JELLY_MAX 5
 
 MAX_ITEM = 6;
 
-INV_LEFT_X = 700;
+INV_LEFT_X = 680;
 INV_BACKGROUND_WIDTH = 200;
 INV_BACKGROUND_HEIGHT = 20;
 INV_BACKGROUND_MARGIN = 5;
 INV_RIGHT_X = INV_LEFT_X + INV_BACKGROUND_WIDTH;
-INV_TOP_LEFT_Y = 555;
+INV_TOP_LEFT_Y = 550;
 ICON_SIZE = 16;
 
-
+// item constructor
+function create_item(_name, _icon, _max_count, _count) constructor {
+	name = _name;
+	icon = _icon;
+	max_count = _max_count;
+	count = _count;
+	
+}
 
 // create the items masterlist
 global.item_list = 
 {
-	slime_jelly : {
-		name: "Slime Jelly",
-		energy: 10,
-		icon: spr_item_jelly,
-		max_count: SLIME_JELLY_MAX, 
-		count: 0
-	},
-	berries : {
-		name: "Berries",
-		energy: 3, 
-		icon: spr_item_berries,
-		max_count: FOOD_MAX, 
-		count: 2
-	},
-	wheat : {
-		name: "Wheat",
-		energy: 0, 
-		icon: spr_item_wheat,
-		max_count: FOOD_MAX, 
-		count: 5
-	},
+	slime_jelly : new create_item(
+		"Slime Jelly",
+		spr_item_jelly,
+		SLIME_JELLY_MAX, 
+		0
+	),
+	berries : new create_item(
+		"Berries",
+		spr_item_berries,
+		FOOD_MAX, 
+		0
+	),
+	wheat : new create_item(
+		"Wheat",
+		spr_item_wheat,
+		FOOD_MAX, 
+		0
+	),
 }
 
 // create the inventory
 inventory = array_create(0);
-
-// test
-array_push(inventory, global.item_list.berries)
-array_push(inventory, global.item_list.wheat)
-
- 

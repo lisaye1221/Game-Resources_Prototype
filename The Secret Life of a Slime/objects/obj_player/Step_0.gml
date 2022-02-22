@@ -48,7 +48,7 @@ if(place_meeting(x, y, obj_prompt_grow_crops) && key_z){
 		
 		
 		// adding crops to player's inventory & subtracting energy cost
-		global.wheat += 8;
+		gain_item(global.item_list.wheat, 8);
 		global.energy -= 10;
 		
 		// resetting all crops in scene so they will grow again
@@ -70,11 +70,11 @@ if(place_meeting(x, y, obj_use_machine) && key_z){
 	this_machine = instance_find(obj_machine, 0);
 	if (this_machine != noone){
 		// inputting wheat if they have any in inventory
-		if (this_machine.status == "empty" && global.wheat != 0){
+		if (this_machine.status == "empty" && 
+			get_item_count(global.item_list.wheat) >= this_machine.WHEAT_COST){
 			// take wheat from player, start timer, show progress bar
-				
-			this_machine.amount_to_convert = global.wheat;
-			global.wheat = 0;
+			this_machine.amount_to_convert = this_machine.WHEAT_COST;
+			lose_item(global.item_list.wheat, 8);
 			this_machine.status = "busy";
 			// change text
 		} 
@@ -86,9 +86,10 @@ if(place_meeting(x, y, obj_use_machine) && key_z){
 		// collecting wheat
 		else if (this_machine.status == "full"){
 			// take energy, disable progress bar, reset vars
-				
-			global.slime_energy = this_machine.amount_to_convert;
-			this_machine.status = "empty";
+			if(will_item_fit(global.item_list.slime_jelly, this_machine.JELLY_PRODUCED)){
+				gain_item(global.item_list.slime_jelly, this_machine.JELLY_PRODUCED);
+				this_machine.status = "empty";
+			}
 			// change text
 		} 
 		
@@ -107,7 +108,8 @@ if(place_meeting(x, y, obj_use_machine) && key_z){
 berry_bush_id = instance_place(x, y, obj_bush);
 if(berry_bush_id != noone && key_z && berry_bush_id.has_berries){
 	berry_bush_id.has_berries = false;
-	// TODO: add berry to inventory  
+	// add 1 unit of berries to inventory
+	gain_one_item(global.item_list.berries);
 }
 	
 
