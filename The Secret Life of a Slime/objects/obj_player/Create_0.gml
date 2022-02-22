@@ -19,7 +19,7 @@ human_sprite[DOWN] = spr_person_down;
 sprite = slime_sprite
 face = DOWN;
 
-global.energy = 3;
+global.energy = 50;
 global.energy_max=100;
 global.gold = 10;
 global.dead = false;

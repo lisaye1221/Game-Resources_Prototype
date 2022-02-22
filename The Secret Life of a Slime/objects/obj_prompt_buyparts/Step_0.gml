@@ -16,6 +16,5 @@ if (paused){
 	if (sprite_exists(screenshot)){
 		sprite_delete(screenshot);
 	}
-	instance_activate_all();
 	instance_deactivate_object(obj_buyparts_menu);
 }
