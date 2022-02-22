@@ -4,4 +4,4 @@ event_inherited()
 prompt_text = "use machine? (" + string(obj_machine.WHEAT_COST) +" wheat)";
 alt_prompt_text1 = "converting...";
 alt_prompt_text2 = "collect the slime jelly?";
-alt_prompt_text3 = "repair machine? (# gold)";
+alt_prompt_text3 = "repair machine? (# parts)";
