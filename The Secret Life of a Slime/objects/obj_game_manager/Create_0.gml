@@ -7,3 +7,5 @@
 global.days = 0;
 // record how much time passed by
 global.time = 0;
+
+ENERGY_DEPLETION_MULTIPLIER = 3;

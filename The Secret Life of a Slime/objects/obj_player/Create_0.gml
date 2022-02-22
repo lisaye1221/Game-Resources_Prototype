@@ -21,6 +21,4 @@ face = DOWN;
 
 global.energy = 100;
 global.energy_max=100;
-global.wheat = 0;
 global.gold = 10;
-global.slime_energy = 0;

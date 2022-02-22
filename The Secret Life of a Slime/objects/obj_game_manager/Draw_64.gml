@@ -13,8 +13,3 @@ draw_text(15, 600, "Gold: " + string(floor(global.gold)) + "G");
 // energy
 draw_text(15, 645, "Energy: " + string(floor(global.energy)));
 draw_healthbar(15, 670, 445, 690, global.energy, c_grey, c_red, c_lime, 0, true, true);
-
-// inventory
-// draw_text(15, 660, "wheat: " + string(floor(global.wheat)));
-// draw_set_halign(fa_right);
-// draw_text(885, 660, "slime energy: " + string(floor(global.slime_energy)));

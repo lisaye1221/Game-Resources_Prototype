@@ -7,6 +7,13 @@ key_down = keyboard_check(vk_down);
 key_left = keyboard_check(vk_left);
 key_z = keyboard_check_pressed(ord("Z"));
 
+key_1 = keyboard_check_pressed(ord("1"));
+key_2 = keyboard_check_pressed(ord("2"));
+key_3 = keyboard_check_pressed(ord("3"));
+key_4 = keyboard_check_pressed(ord("4"));
+key_5 = keyboard_check_pressed(ord("5"));
+key_6 = keyboard_check_pressed(ord("6"));
+
 // ** Movement ** //
 
 x_speed = (key_right - key_left) * move_spd;
@@ -49,7 +56,7 @@ if(place_meeting(x, y, obj_prompt_grow_crops) && key_z){
 		
 		// adding crops to player's inventory & subtracting energy cost
 		gain_item(global.item_list.wheat, 8);
-		global.energy -= 10;
+		global.energy -= 5;
 		
 		// resetting all crops in scene so they will grow again
 		for (var i = 0; i < instance_number(obj_crop); i ++;)
@@ -111,5 +118,47 @@ if(berry_bush_id != noone && key_z && berry_bush_id.has_berries){
 	// add 1 unit of berries to inventory
 	gain_one_item(global.item_list.berries);
 }
-	
 
+
+// using items
+inv = obj_inventory_manager.inventory
+inv_count = array_length(inv);
+if(key_1 && inv_count >= 1){
+	use_item(inv[0]);
+}
+if(key_2 && inv_count >= 2){
+	use_item(inv[1]);
+}
+if(key_3 && inv_count >= 3){
+	use_item(inv[2]);
+}
+if(key_4 && inv_count >= 4){
+	use_item(inv[3]);
+}
+if(key_5 && inv_count >= 5){
+	use_item(inv[4]);
+}
+if(key_6 && inv_count >= 6){
+	use_item(inv[5]);
+}
+
+
+function use_item(item){
+	switch(item.name){
+		case global.item_list.berries.name:
+			increase_energy(3);
+			lose_one_item(item);
+		break;
+		case global.item_list.slime_jelly.name:
+			increase_energy(10);
+			lose_one_item(item);
+		break;
+		default:
+			return;
+	}
+}
+	
+function increase_energy(amount){
+	newAmount = amount + global.energy;
+	global.energy = newAmount > global.energy_max ? global.energy_max : newAmount;
+}

@@ -5,7 +5,7 @@ depth = -9999;
 
 // the max amount before it counts as a seperate item
 #macro FOOD_MAX 24
-#macro SLIME_JELLY_MAX 5
+#macro SLIME_JELLY_MAX 2
 
 MAX_ITEM = 6;
 
