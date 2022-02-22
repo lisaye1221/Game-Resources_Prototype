@@ -19,3 +19,11 @@ function go_home(player){
 	player.x = HOME_X;
 	player.y = HOME_Y;
 }
+
+function die() {
+	audio_stop_all();
+	// sad death music ?
+	
+	global.dead = true;
+	
+}
