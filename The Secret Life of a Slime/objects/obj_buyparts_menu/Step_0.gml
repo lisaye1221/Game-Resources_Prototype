@@ -10,8 +10,7 @@ accept_key = keyboard_check_pressed(vk_enter);
 op_length = array_length(option[menu_level]);
 
 // current inventory
-option[1,0] = "You have " + string(get_item_count(global.item_list.wheat)) + " wheat";
-option[2,0] = "You have " + string(get_item_count(global.item_list.berries)) + " berries";
+option[1,0] = "You have " + string(global.gold) + " gold";
 
 // move through menu
 pos += down_key - up_key;
@@ -29,50 +28,29 @@ if (accept_key){
 		// main menu
 		case 0:
 			switch (pos){
-				// sell wheat
+				// buy parts
 				case 0:
 					menu_level = 1;
 					break;
-				// sell berries
-				case 1:
-					menu_level = 2;
-					break;
 				// exit
-				case 2:
-					this_prompt = instance_find(obj_prompt_sell, 0);
+				case 1:
+					this_prompt = instance_find(obj_prompt_buyparts, 0);
 					if (this_prompt != noone){
 						this_prompt.paused = false;
 					}
 					break;}
 			break;
 		
-		// wheat menu
+		// parts menu
 		case 1:
 			switch (pos){
-				// you have # wheat
+				// you have # gold
 				case 0:
 					break;
-				// # wheat
+				// # parts
 				case 1:
 					break;
-				// sell
-				case 2:
-					break;
-				// back
-				case 3:
-					menu_level = 0;
-					break;}
-		
-		// berries menu
-		case 2:
-			switch (pos){
-				// you have # berries
-				case 0:
-					break;
-				// # berries
-				case 1:
-					break;
-				// sell
+				// buy
 				case 2:
 					break;
 				// back

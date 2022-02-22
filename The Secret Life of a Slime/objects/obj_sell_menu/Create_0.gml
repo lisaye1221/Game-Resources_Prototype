@@ -14,20 +14,16 @@ option[0,1] = "Sell Berries?";
 option[0,2] = "Exit";
 
 // wheat menu
-option[1,0] = "Window Size";
-option[1,1] = "Brightness";
-option[1,2] = "Controls";
+option[1,0] = "You have # wheat";	// not clickable
+option[1,1] = "# wheat";		// input field
+option[1,2] = "Sell";
 option[1,3] = "Back";
 
 // berries menu
-option[2,0] = "Size";
-option[2,1] = "tness";
-option[2,2] = "Cols";
-option[2,3] = "Bk";
+option[2,0] = "You have # berries";
+option[2,1] = "# berries";
+option[2,2] = "Sell";
+option[2,3] = "Back";
 
 op_length = 0;
 menu_level = 0;
-
-// to pause while menu is active
-paused = false;
-screenshot = -1;
