@@ -10,8 +10,10 @@ if(place_meeting(x, y, obj_player) && keyboard_check_pressed(ord("Z"))){
 }
 
 if (paused){
-	instance_deactivate_all(1);
+	instance_deactivate_all(true);
 	instance_activate_object(obj_buyparts_menu);
+	instance_activate_object(obj_inventory_manager);
+	instance_activate_object(obj_game_manager);
 } else {
 	if (sprite_exists(screenshot)){
 		sprite_delete(screenshot);
