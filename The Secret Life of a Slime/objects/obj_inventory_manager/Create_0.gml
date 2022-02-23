@@ -47,6 +47,12 @@ global.item_list =
 		FOOD_MAX, 
 		0
 	),
+	fish: new create_item(
+		"Fish",
+		spr_item_fish,
+		5,
+		0
+	)
 }
 
 // create the inventory
