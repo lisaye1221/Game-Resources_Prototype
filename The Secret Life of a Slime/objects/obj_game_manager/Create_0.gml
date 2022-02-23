@@ -8,7 +8,8 @@ global.days = 0;
 // record how much time passed by
 global.time = 0;
 
-ENERGY_DEPLETION_MULTIPLIER = 3;
+// higher = depletes faster
+ENERGY_DEPLETION_MULTIPLIER = 3.5;
 
 
 // ** Game States ** 
