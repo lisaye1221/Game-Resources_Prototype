@@ -3,6 +3,7 @@
 
 depth = -y - 30;
 
+interactable = true; // false when we are at town
 // statuses are: "empty", "busy", "full", "broken"
 status = "empty";
 

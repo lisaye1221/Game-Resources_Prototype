@@ -13,3 +13,22 @@ if global.dead {
 		game_restart();
 	}
 }
+
+if(is_room_transition){
+	length = array_length(home_instances_to_run_in_bg)
+	if(room == home){
+		
+		for(var i = 0; i < length; i++){
+			home_instances_to_run_in_bg[i].visible = true;
+			home_instances_to_run_in_bg[i].interactable = true;
+		}
+	}
+	else if(room == town){
+		instance_deactivate_object(obj_bush_solid);
+		for(var i = 0; i < length; i++){
+			home_instances_to_run_in_bg[i].visible = false;	
+			home_instances_to_run_in_bg[i].interactable = false;
+		}
+	}
+	is_room_transition = false;
+}

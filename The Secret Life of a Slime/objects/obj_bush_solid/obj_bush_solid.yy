@@ -4,7 +4,7 @@
     "path": "sprites/spr_bush_empty/spr_bush_empty.yy",
   },
   "solid": false,
-  "visible": true,
+  "visible": false,
   "spriteMaskId": null,
   "persistent": false,
   "parentObjectId": {
