@@ -36,6 +36,12 @@ if not global.dead {
 	if(place_meeting(x, y+y_speed, obj_solid)){
 		y_speed = 0;
 	}
+	if(x+x_speed > room_width || x+x_speed < 0){
+		x_speed = 0;
+	}
+	if(y+y_speed < 0 || y+y_speed >  525){
+		y_speed = 0;
+	}
 	// move the player
 	x += x_speed;
 	y += y_speed;
