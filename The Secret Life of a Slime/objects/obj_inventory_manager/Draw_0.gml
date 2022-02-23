@@ -9,7 +9,7 @@ if not global.dead {
 		height = INV_BACKGROUND_HEIGHT;
 		space = INV_BACKGROUND_MARGIN;
 		y1 = INV_TOP_LEFT_Y + (i*(height + space));
-		draw_set_color(c_gray);
+		draw_set_color(make_color_rgb(181,157,130));
 		draw_roundrect(INV_LEFT_X, y1, INV_RIGHT_X, y1+height, false)
 		draw_set_color(c_white);
 		draw_set_valign(fa_center);

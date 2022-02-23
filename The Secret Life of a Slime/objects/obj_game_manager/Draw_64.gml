@@ -3,6 +3,7 @@
 
 if not global.dead {
 	// day and time
+	draw_set_valign(fa_center);
 	draw_set_halign(fa_left);
 	draw_set_color(c_white);
 	draw_text(15, 560, "Time: " + string(floor(global.time)));
@@ -13,7 +14,7 @@ if not global.dead {
 
 	// energy
 	draw_set_color(c_aqua);
-	draw_text(15, 650, "Energy: " + string(floor(global.energy)));
+	draw_text(15, 655, "Energy: " + string(floor(global.energy)));
 	draw_healthbar(15, 670, 445, 690, global.energy, c_grey, c_aqua, c_aqua, 0, true, true);
 }
 else {
