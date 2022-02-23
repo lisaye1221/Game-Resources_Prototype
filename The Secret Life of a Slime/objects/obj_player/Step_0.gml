@@ -1,6 +1,8 @@
 /// @description Insert description here
 // You can write your code in this editor
 
+depth = -y;
+
 if not global.dead {
 
 	key_up = keyboard_check(vk_up);

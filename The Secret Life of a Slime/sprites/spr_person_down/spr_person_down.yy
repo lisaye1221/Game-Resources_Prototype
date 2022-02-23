@@ -1,8 +1,42 @@
 {
+  "bboxMode": 2,
+  "collisionKind": 1,
+  "type": 0,
+  "origin": 4,
+  "preMultiplyAlpha": false,
+  "edgeFiltering": false,
+  "collisionTolerance": 0,
+  "swfPrecision": 2.525,
+  "bbox_left": 10,
+  "bbox_right": 20,
+  "bbox_top": 13,
+  "bbox_bottom": 31,
+  "HTile": false,
+  "VTile": false,
+  "For3D": false,
+  "width": 32,
+  "height": 32,
   "textureGroupId": {
     "name": "Default",
     "path": "texturegroups/Default",
   },
+  "swatchColours": null,
+  "gridX": 0,
+  "gridY": 0,
+  "frames": [
+    {"compositeImage":{"FrameId":{"name":"d2343b23-a159-4e74-8418-604b5fe90fd4","path":"sprites/spr_person_down/spr_person_down.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
+        {"FrameId":{"name":"d2343b23-a159-4e74-8418-604b5fe90fd4","path":"sprites/spr_person_down/spr_person_down.yy",},"LayerId":{"name":"e26b76a0-869a-41f3-a284-e4cbf0abee98","path":"sprites/spr_person_down/spr_person_down.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+      ],"parent":{"name":"spr_person_down","path":"sprites/spr_person_down/spr_person_down.yy",},"resourceVersion":"1.0","name":"d2343b23-a159-4e74-8418-604b5fe90fd4","tags":[],"resourceType":"GMSpriteFrame",},
+    {"compositeImage":{"FrameId":{"name":"09d94c88-db2e-493a-9b5a-58f2c6834d5d","path":"sprites/spr_person_down/spr_person_down.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
+        {"FrameId":{"name":"09d94c88-db2e-493a-9b5a-58f2c6834d5d","path":"sprites/spr_person_down/spr_person_down.yy",},"LayerId":{"name":"e26b76a0-869a-41f3-a284-e4cbf0abee98","path":"sprites/spr_person_down/spr_person_down.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+      ],"parent":{"name":"spr_person_down","path":"sprites/spr_person_down/spr_person_down.yy",},"resourceVersion":"1.0","name":"09d94c88-db2e-493a-9b5a-58f2c6834d5d","tags":[],"resourceType":"GMSpriteFrame",},
+    {"compositeImage":{"FrameId":{"name":"6ce8ceb4-6dd9-4ba7-a306-b30c1ddc0a9a","path":"sprites/spr_person_down/spr_person_down.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
+        {"FrameId":{"name":"6ce8ceb4-6dd9-4ba7-a306-b30c1ddc0a9a","path":"sprites/spr_person_down/spr_person_down.yy",},"LayerId":{"name":"e26b76a0-869a-41f3-a284-e4cbf0abee98","path":"sprites/spr_person_down/spr_person_down.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+      ],"parent":{"name":"spr_person_down","path":"sprites/spr_person_down/spr_person_down.yy",},"resourceVersion":"1.0","name":"6ce8ceb4-6dd9-4ba7-a306-b30c1ddc0a9a","tags":[],"resourceType":"GMSpriteFrame",},
+    {"compositeImage":{"FrameId":{"name":"5030e2a2-b7c4-4e7b-a4e7-dafe08825141","path":"sprites/spr_person_down/spr_person_down.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
+        {"FrameId":{"name":"5030e2a2-b7c4-4e7b-a4e7-dafe08825141","path":"sprites/spr_person_down/spr_person_down.yy",},"LayerId":{"name":"e26b76a0-869a-41f3-a284-e4cbf0abee98","path":"sprites/spr_person_down/spr_person_down.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+      ],"parent":{"name":"spr_person_down","path":"sprites/spr_person_down/spr_person_down.yy",},"resourceVersion":"1.0","name":"5030e2a2-b7c4-4e7b-a4e7-dafe08825141","tags":[],"resourceType":"GMSpriteFrame",},
+  ],
   "sequence": {
     "spriteId": {"name":"spr_person_down","path":"sprites/spr_person_down/spr_person_down.yy",},
     "timeUnits": 1,
@@ -42,40 +76,6 @@
     "tags": [],
     "resourceType": "GMSequence",
   },
-  "bboxMode": 0,
-  "collisionKind": 1,
-  "type": 0,
-  "origin": 4,
-  "preMultiplyAlpha": false,
-  "edgeFiltering": false,
-  "collisionTolerance": 0,
-  "swfPrecision": 2.525,
-  "bbox_left": 2,
-  "bbox_right": 29,
-  "bbox_top": 0,
-  "bbox_bottom": 31,
-  "HTile": false,
-  "VTile": false,
-  "For3D": false,
-  "width": 32,
-  "height": 32,
-  "swatchColours": null,
-  "gridX": 0,
-  "gridY": 0,
-  "frames": [
-    {"compositeImage":{"FrameId":{"name":"d2343b23-a159-4e74-8418-604b5fe90fd4","path":"sprites/spr_person_down/spr_person_down.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"d2343b23-a159-4e74-8418-604b5fe90fd4","path":"sprites/spr_person_down/spr_person_down.yy",},"LayerId":{"name":"e26b76a0-869a-41f3-a284-e4cbf0abee98","path":"sprites/spr_person_down/spr_person_down.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_person_down","path":"sprites/spr_person_down/spr_person_down.yy",},"resourceVersion":"1.0","name":"d2343b23-a159-4e74-8418-604b5fe90fd4","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"09d94c88-db2e-493a-9b5a-58f2c6834d5d","path":"sprites/spr_person_down/spr_person_down.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"09d94c88-db2e-493a-9b5a-58f2c6834d5d","path":"sprites/spr_person_down/spr_person_down.yy",},"LayerId":{"name":"e26b76a0-869a-41f3-a284-e4cbf0abee98","path":"sprites/spr_person_down/spr_person_down.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_person_down","path":"sprites/spr_person_down/spr_person_down.yy",},"resourceVersion":"1.0","name":"09d94c88-db2e-493a-9b5a-58f2c6834d5d","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"6ce8ceb4-6dd9-4ba7-a306-b30c1ddc0a9a","path":"sprites/spr_person_down/spr_person_down.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"6ce8ceb4-6dd9-4ba7-a306-b30c1ddc0a9a","path":"sprites/spr_person_down/spr_person_down.yy",},"LayerId":{"name":"e26b76a0-869a-41f3-a284-e4cbf0abee98","path":"sprites/spr_person_down/spr_person_down.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_person_down","path":"sprites/spr_person_down/spr_person_down.yy",},"resourceVersion":"1.0","name":"6ce8ceb4-6dd9-4ba7-a306-b30c1ddc0a9a","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"5030e2a2-b7c4-4e7b-a4e7-dafe08825141","path":"sprites/spr_person_down/spr_person_down.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"5030e2a2-b7c4-4e7b-a4e7-dafe08825141","path":"sprites/spr_person_down/spr_person_down.yy",},"LayerId":{"name":"e26b76a0-869a-41f3-a284-e4cbf0abee98","path":"sprites/spr_person_down/spr_person_down.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_person_down","path":"sprites/spr_person_down/spr_person_down.yy",},"resourceVersion":"1.0","name":"5030e2a2-b7c4-4e7b-a4e7-dafe08825141","tags":[],"resourceType":"GMSpriteFrame",},
-  ],
   "layers": [
     {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"e26b76a0-869a-41f3-a284-e4cbf0abee98","tags":[],"resourceType":"GMImageLayer",},
   ],
