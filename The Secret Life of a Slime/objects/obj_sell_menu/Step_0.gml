@@ -12,7 +12,8 @@ op_length = array_length(option[menu_level]);
 // current inventory
 option[1,0] = "You have " + string(get_item_count(global.item_list.wheat)) + " wheat";
 option[2,0] = "You have " + string(get_item_count(global.item_list.berries)) + " berries";
-
+option[1,2] = string(offered_wheat) + " wheat";
+option[2,2] = string(offered_berries) + " berries";
 // move through menu
 pos += down_key - up_key;
 
@@ -52,14 +53,26 @@ if (accept_key){
 				// you have # wheat
 				case 0:
 					break;
-				// # wheat
+				// +
 				case 1:
+					if (offered_wheat < get_item_count(global.item_list.wheat)) offered_wheat++;
 					break;
-				// sell
+				// # wheat
 				case 2:
 					break;
-				// back
+				// -
 				case 3:
+					if(offered_wheat > 0) offered_wheat--;
+					break;
+				// sell
+				case 4:
+					global.gold += (offered_wheat * wheat_price);
+					lose_item(global.item_list.wheat, offered_wheat);
+					offered_wheat = 0;
+					break;
+				// back
+				case 5:
+					offered_wheat = 0;
 					menu_level = 0;
 					break;}
 		
@@ -69,14 +82,26 @@ if (accept_key){
 				// you have # berries
 				case 0:
 					break;
-				// # berries
+				// +
 				case 1:
+					if (offered_berries < get_item_count(global.item_list.berries)) offered_berries++;
 					break;
-				// sell
+				// # berries
 				case 2:
 					break;
-				// back
+				// -
 				case 3:
+					if (offered_berries > 0) offered_berries--;
+					break;
+				// sell
+				case 4:
+					global.gold += (offered_berries * berry_price);
+					lose_item(global.item_list.berries, offered_berries);
+					offered_berries = 0;
+					break;
+				// back
+				case 5:
+					offered_berries = 0;
 					menu_level = 0;
 					break;}
 	}

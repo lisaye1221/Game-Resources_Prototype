@@ -13,6 +13,9 @@ op_length = array_length(option[menu_level]);
 option[1,0] = "You have " + string(global.gold) + " gold";
 option[2,0] = "You have " + string(global.gold) + " gold";
 option[3,0] = "You have " + string(global.gold) + " gold";
+option[1,2] = string(requested_wheat) + " wheat (" + string(requested_wheat * wheat_price) + " gold)";		// input field
+option[2,2] = string(requested_berries) + " berries (" + string(requested_berries * berry_price) + " gold)";
+option[3,2] = string(requested_fish) + " fish (" + string(requested_fish * fish_price) + " gold)";
 
 // move through menu
 pos += down_key - up_key;
@@ -41,6 +44,7 @@ if (accept_key){
 				// buy fish
 				case 2:
 					menu_level = 3;
+					break;
 				// exit
 				case 3:
 					this_prompt = instance_find(obj_prompt_buyfood, 0);
@@ -56,16 +60,29 @@ if (accept_key){
 				// you have # gold
 				case 0:
 					break;
-				// # wheat
+				// +
 				case 1:
+					if (((requested_wheat+1) * wheat_price) <= global.gold) requested_wheat++;
 					break;
-				// buy
+				// # wheat
 				case 2:
 					break;
-				// back
+				// -
 				case 3:
+					if (requested_wheat > 0) requested_wheat--;
+					break;
+				// buy
+				case 4:
+					global.gold -= (requested_wheat * wheat_price);
+					gain_item(global.item_list.wheat, requested_wheat);
+					requested_wheat = 0;
+					break;
+				// back
+				case 5:
+					requested_wheat = 0;
 					menu_level = 0;
 					break;}
+			break;
 		
 		// berries menu
 		case 2:
@@ -73,16 +90,29 @@ if (accept_key){
 				// you have # gold
 				case 0:
 					break;
-				// # berries
+				// +
 				case 1:
+					if (((requested_berries+1) * berry_price) <= global.gold) requested_berries++;
 					break;
-				// buy
+				// # berries
 				case 2:
 					break;
-				// back
+				// -
 				case 3:
+					if (requested_berries > 0) requested_berries--;
+					break;
+				// buy
+				case 4:
+					global.gold -= (requested_berries * berry_price);
+					gain_item(global.item_list.berries, requested_berries);
+					requested_berries = 0;
+					break;
+				// back
+				case 5:
+					requested_berries = 0;
 					menu_level = 0;
 					break;}
+			break;
 		
 		// fish menu
 		case 3:
@@ -90,16 +120,29 @@ if (accept_key){
 				// you have # gold
 				case 0:
 					break;
-				// # fish
+				// +
 				case 1:
+					if (((requested_fish+1)*fish_price) <= global.gold) requested_fish++;
 					break;
-				// buy
+				// # fish
 				case 2:
 					break;
-				// back
+				// -
 				case 3:
+					if (requested_fish > 0) requested_fish--;
+					break;
+				// buy
+				case 4:
+					global.gold -= (requested_fish * fish_price);
+					gain_item(global.item_list.fish, requested_fish);
+					requested_fish = 0;
+					break;
+				// back
+				case 5:
+					requested_fish = 0;
 					menu_level = 0;
 					break;}
+			break;
 	}
 	// reset pos
 	if (_ml != menu_level) pos = 0;

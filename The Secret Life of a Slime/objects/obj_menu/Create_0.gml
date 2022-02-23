@@ -11,3 +11,8 @@ pos = 0;
 
 op_length = 0;
 menu_level = 0;
+
+wheat_price = 8;
+berry_price = 2;
+fish_price = 15;
+part_price = 10;

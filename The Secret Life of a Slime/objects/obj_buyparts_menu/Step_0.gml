@@ -11,6 +11,7 @@ op_length = array_length(option[menu_level]);
 
 // current inventory
 option[1,0] = "You have " + string(global.gold) + " gold";
+option[1,2] = string(requested_parts) + " parts (" + string(requested_parts * parts_price) + " gold)";		// input field
 
 // move through menu
 pos += down_key - up_key;
@@ -47,14 +48,22 @@ if (accept_key){
 				// you have # gold
 				case 0:
 					break;
-				// # parts
+				// +
 				case 1:
+					if (((requested_parts+1) * parts_price) <= global.gold) requested_parts++;
 					break;
-				// buy
+				// # parts
 				case 2:
 					break;
-				// back
+				// -
 				case 3:
+					if (requested_parts > 0) requested_parts--;
+					break;
+				// buy
+				case 4:
+					break;
+				// sell
+				case 5:
 					menu_level = 0;
 					break;}
 	}
