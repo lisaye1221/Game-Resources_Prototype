@@ -17,13 +17,14 @@ if global.dead {
 if(is_room_transition){
 	length = array_length(home_instances_to_run_in_bg)
 	if(room == home){
-		
 		for(var i = 0; i < length; i++){
 			home_instances_to_run_in_bg[i].visible = true;
 			home_instances_to_run_in_bg[i].interactable = true;
 		}
 	}
 	else if(room == town){
+		transformation_remaining = TOWN_TIME_LIMIT;
+		transformation_cooldown = TRANSFORMATION_COOLDOWN_TIME;
 		instance_deactivate_object(obj_bush_solid);
 		for(var i = 0; i < length; i++){
 			home_instances_to_run_in_bg[i].visible = false;	
@@ -31,4 +32,17 @@ if(is_room_transition){
 		}
 	}
 	is_room_transition = false;
+}
+
+if(room == town){
+	transformation_remaining -= (1 / room_speed);	
+	if(transformation_remaining <= 0){
+		forced_home(obj_player);
+	}
+}
+if(room == home){
+	if(transformation_cooldown > 0){
+		transformation_cooldown -= (1 / room_speed);	
+	}
+	if(transformation_cooldown < 0) {transformation_cooldown = 0;}
 }
