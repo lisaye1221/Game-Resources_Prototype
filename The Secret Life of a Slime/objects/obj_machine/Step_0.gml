@@ -11,6 +11,17 @@ if (status == "busy"){
 		status = "full";
 	}
 }
+else if (status == "repairing"){
+	
+	time_left -= 1/room_speed;
+	
+	if (time_left <= 0){
+		time_left = time_to_convert;
+		status = "empty";
+	}
+}
+
+
 
 // activating full signal
 if (status == "full" && !full_signal && interactable){
@@ -19,4 +30,14 @@ if (status == "full" && !full_signal && interactable){
 } else if (status != "full" && full_signal){
 	obj_exclamation.visible = false;
 	full_signal = false;
+}
+
+// fixing
+if (status == "broken" || status == "repairing") {
+	
+	sprite_index = spr_machine_broken;
+	
+}
+else{
+	sprite_index = spr_machine;
 }

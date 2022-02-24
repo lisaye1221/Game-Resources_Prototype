@@ -37,6 +37,7 @@ if(is_room_transition){
 if(room == town){
 	transformation_remaining -= (1 / room_speed);	
 	if(transformation_remaining <= 0){
+		
 		forced_home(obj_player);
 	}
 }

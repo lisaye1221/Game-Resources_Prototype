@@ -66,7 +66,7 @@ if not global.dead {
 		
 			// adding crops to player's inventory & subtracting energy cost
 			gain_item(global.item_list.wheat, 8);
-			global.energy -= 5;
+			global.energy -= 10;
 		
 			// resetting all crops in scene so they will grow again
 			for (var i = 0; i < instance_number(obj_crop); i ++;)
@@ -93,10 +93,12 @@ if not global.dead {
 				this_machine.amount_to_convert = this_machine.WHEAT_COST;
 				lose_item(global.item_list.wheat, 8);
 				this_machine.status = "busy";
+				this_machine.durability -= 1;
+				
 				// change text
 			} 
 			
-			else if (this_machine.status == "busy"){
+			else if (this_machine.status == "busy" || this_machine.status == "repairing"){
 				// do nothing
 			}
 			
@@ -105,7 +107,13 @@ if not global.dead {
 				// take energy, disable progress bar, reset vars
 				if(will_item_fit(global.item_list.slime_jelly, this_machine.JELLY_PRODUCED)){
 					gain_item(global.item_list.slime_jelly, this_machine.JELLY_PRODUCED);
-					this_machine.status = "empty";
+					// check if machine has broken
+					if (this_machine.durability <= 0) {
+						this_machine.status = "broken";
+					}
+					else{
+						this_machine.status = "empty";
+					}
 				}
 				// change text
 			} 
@@ -114,10 +122,20 @@ if not global.dead {
 			// TODO: repairing machine
 		
 		
-			else if (this_machine.status == "broken"){
+			else if (this_machine.status == "broken" && get_item_count(global.item_list.parts) >= 1){
 				// do something (take gold or parts or whatever from player and wait for repair)
+				
+				lose_item(global.item_list.parts, 1);
+				global.energy -= 10;
+				
 				// change status to "empty"
 				// change text
+				
+				this_machine.status = "repairing";
+				this_machine.durability = 2;
+				
+				
+				
 			}
 		}
 	}

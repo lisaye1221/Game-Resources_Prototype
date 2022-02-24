@@ -16,5 +16,8 @@ if (this_machine != noone){
 		case "broken":
 			which_text = 3;
 			break;
+		case "repairing":
+			which_text = 4;
+			break;
 	}
 }

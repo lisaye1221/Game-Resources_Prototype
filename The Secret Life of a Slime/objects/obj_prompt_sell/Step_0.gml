@@ -3,6 +3,7 @@
 event_inherited();
 
 if(place_meeting(x, y, obj_player) && keyboard_check_pressed(ord("Z"))){
+	
 	instance_deactivate_object(obj_player);
 	instance_activate_object(obj_sell_menu);
 	instance_activate_object(obj_inventory_manager);
