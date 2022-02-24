@@ -14,12 +14,22 @@ option[1,0] = "You have " + string(get_item_count(global.item_list.wheat)) + " w
 option[2,0] = "You have " + string(get_item_count(global.item_list.berries)) + " berries";
 option[1,2] = string(offered_wheat) + " wheat";
 option[2,2] = string(offered_berries) + " berries";
-// move through menu
-pos += down_key - up_key;
 
-// loop to top or bottom when out of range
-if (pos >= op_length) pos = 0;
-if (pos < 0) pos = op_length-1;
+
+if (down_key || up_key){
+	// move through menu
+	pos += down_key - up_key;
+	// loop to top or bottom when out of range
+	if (pos >= op_length) pos = 0;
+	if (pos < 0) pos = op_length-1;
+
+	while (!interactable[menu_level, pos]){
+		pos += down_key - up_key;		// skip to next interactable item
+		// loop to top or bottom when out of range
+		if (pos >= op_length) pos = 0;
+		if (pos < 0) pos = op_length-1;
+	}
+}
 
 // use options
 if (accept_key){
@@ -73,6 +83,7 @@ if (accept_key){
 					offered_wheat = 0;
 					menu_level = 0;
 					break;}
+			break;
 		
 		// berries menu
 		case 2:
@@ -103,6 +114,7 @@ if (accept_key){
 					offered_berries = 0;
 					menu_level = 0;
 					break;}
+			break;
 	}
 	// reset pos
 	if (_ml != menu_level) pos = 0;

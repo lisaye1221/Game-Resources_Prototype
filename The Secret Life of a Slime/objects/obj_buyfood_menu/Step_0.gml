@@ -17,12 +17,20 @@ option[1,2] = string(requested_wheat) + " wheat (" + string(requested_wheat * wh
 option[2,2] = string(requested_berries) + " berries (" + string(requested_berries * berry_price) + " gold)";
 option[3,2] = string(requested_fish) + " fish (" + string(requested_fish * fish_price) + " gold)";
 
-// move through menu
-pos += down_key - up_key;
+if (down_key || up_key){
+	// move through menu
+	pos += down_key - up_key;
+	// loop to top or bottom when out of range
+	if (pos >= op_length) pos = 0;
+	if (pos < 0) pos = op_length-1;
 
-// loop to top or bottom when out of range
-if (pos >= op_length) pos = 0;
-if (pos < 0) pos = op_length-1;
+	while (!interactable[menu_level, pos]){
+		pos += down_key - up_key;		// skip to next interactable item
+		// loop to top or bottom when out of range
+		if (pos >= op_length) pos = 0;
+		if (pos < 0) pos = op_length-1;
+	}
+}
 
 // use options
 if (accept_key){

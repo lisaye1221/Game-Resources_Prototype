@@ -13,12 +13,20 @@ op_length = array_length(option[menu_level]);
 option[1,0] = "You have " + string(global.gold) + " gold";
 option[1,2] = string(requested_parts) + " parts (" + string(requested_parts * parts_price) + " gold)";		// input field
 
-// move through menu
-pos += down_key - up_key;
+if (down_key || up_key){
+	// move through menu
+	pos += down_key - up_key;
+	// loop to top or bottom when out of range
+	if (pos >= op_length) pos = 0;
+	if (pos < 0) pos = op_length-1;
 
-// loop to top or bottom when out of range
-if (pos >= op_length) pos = 0;
-if (pos < 0) pos = op_length-1;
+	while (!interactable[menu_level, pos]){
+		pos += down_key - up_key;		// skip to next interactable item
+		// loop to top or bottom when out of range
+		if (pos >= op_length) pos = 0;
+		if (pos < 0) pos = op_length-1;
+	}
+}
 
 // use options
 if (accept_key){
@@ -70,6 +78,7 @@ if (accept_key){
 				case 5:
 					menu_level = 0;
 					break;}
+			break;
 	}
 	// reset pos
 	if (_ml != menu_level) pos = 0;
