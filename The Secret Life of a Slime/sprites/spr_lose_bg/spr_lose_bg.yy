@@ -24,15 +24,15 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"871f4d73-2a4f-4059-921b-8160a0bd865d","path":"sprites/spr_town_bg/spr_town_bg.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"871f4d73-2a4f-4059-921b-8160a0bd865d","path":"sprites/spr_town_bg/spr_town_bg.yy",},"LayerId":{"name":"28a4c632-d9b2-4ec9-a1c7-843a6ba377c7","path":"sprites/spr_town_bg/spr_town_bg.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_town_bg","path":"sprites/spr_town_bg/spr_town_bg.yy",},"resourceVersion":"1.0","name":"871f4d73-2a4f-4059-921b-8160a0bd865d","tags":[],"resourceType":"GMSpriteFrame",},
+    {"compositeImage":{"FrameId":{"name":"355b5a56-b6d5-4d13-916e-5e143f4737c1","path":"sprites/spr_lose_bg/spr_lose_bg.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
+        {"FrameId":{"name":"355b5a56-b6d5-4d13-916e-5e143f4737c1","path":"sprites/spr_lose_bg/spr_lose_bg.yy",},"LayerId":{"name":"c43bb2ad-1b7d-4367-891b-3b239c765f29","path":"sprites/spr_lose_bg/spr_lose_bg.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+      ],"parent":{"name":"spr_lose_bg","path":"sprites/spr_lose_bg/spr_lose_bg.yy",},"resourceVersion":"1.0","name":"355b5a56-b6d5-4d13-916e-5e143f4737c1","tags":[],"resourceType":"GMSpriteFrame",},
   ],
   "sequence": {
-    "spriteId": {"name":"spr_town_bg","path":"sprites/spr_town_bg/spr_town_bg.yy",},
+    "spriteId": {"name":"spr_lose_bg","path":"sprites/spr_lose_bg/spr_lose_bg.yy",},
     "timeUnits": 1,
     "playback": 1,
-    "playbackSpeed": 60.0,
+    "playbackSpeed": 30.0,
     "playbackSpeedType": 0,
     "autoRecord": true,
     "volume": 1.0,
@@ -41,7 +41,7 @@
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
       {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
-            {"id":"b7866453-5e63-4398-bf1e-8c467cfb6b2f","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"871f4d73-2a4f-4059-921b-8160a0bd865d","path":"sprites/spr_town_bg/spr_town_bg.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"bf86a844-30ad-4ea7-a26a-b9bcd8f78827","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"355b5a56-b6d5-4d13-916e-5e143f4737c1","path":"sprites/spr_lose_bg/spr_lose_bg.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
           ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
     ],
     "visibleRange": null,
@@ -58,14 +58,14 @@
     "yorigin": 0,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"spr_town_bg","path":"sprites/spr_town_bg/spr_town_bg.yy",},
+    "parent": {"name":"spr_lose_bg","path":"sprites/spr_lose_bg/spr_lose_bg.yy",},
     "resourceVersion": "1.3",
-    "name": "spr_town_bg",
+    "name": "spr_lose_bg",
     "tags": [],
     "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"28a4c632-d9b2-4ec9-a1c7-843a6ba377c7","tags":[],"resourceType":"GMImageLayer",},
+    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"c43bb2ad-1b7d-4367-891b-3b239c765f29","tags":[],"resourceType":"GMImageLayer",},
   ],
   "nineSlice": null,
   "parent": {
@@ -73,7 +73,7 @@
     "path": "folders/Sprites/background.yy",
   },
   "resourceVersion": "1.0",
-  "name": "spr_town_bg",
+  "name": "spr_lose_bg",
   "tags": [],
   "resourceType": "GMSprite",
 }

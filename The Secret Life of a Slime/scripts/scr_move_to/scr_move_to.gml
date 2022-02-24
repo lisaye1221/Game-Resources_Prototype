@@ -30,9 +30,12 @@ function forced_home(player){
 }
 
 function die() {
-	audio_stop_all();
-	// sad death music ?
-	
-	global.dead = true;
-	
+	if(!global.dead){
+		audio_stop_all();
+		// sad death music ?
+		global.dead = true;
+		room_goto(lose);
+		instance_deactivate_all(false);
+		instance_activate_object(obj_game_manager);
+	}
 }

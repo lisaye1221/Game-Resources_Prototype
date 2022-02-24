@@ -38,6 +38,3 @@ if not global.dead {
 	}
 
 }
-else {
-	draw_clear_alpha(c_black, 0.01);
-}

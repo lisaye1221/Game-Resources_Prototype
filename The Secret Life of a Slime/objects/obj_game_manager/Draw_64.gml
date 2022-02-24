@@ -25,5 +25,6 @@ if not global.dead {
 }
 else {
 	draw_set_halign(fa_center);
-	draw_text(300, 300, "You die of starvation after living "+ string(floor(global.time)) +" minutes, PRESS R TO PLAY AGAIN!");
+	draw_text(450, 350, "You die of starvation after living "+ string(floor(global.time)) +" minutes");
+	draw_text(450, 380, "PRESS R TO PLAY AGAIN!");
 }
