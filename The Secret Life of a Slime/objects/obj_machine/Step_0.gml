@@ -7,6 +7,7 @@ if (status == "busy"){
 	time_left -= 1/room_speed;
 	
 	if (time_left <= 0){
+		audio_play_sound(sfx_machine_finish, 1, 0);
 		time_left = time_to_convert;
 		status = "full";
 	}
