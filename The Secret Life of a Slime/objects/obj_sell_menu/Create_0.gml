@@ -24,3 +24,5 @@ option[2,3] = "-";
 option[2,4] = "Sell";
 option[2,5] = "Back";
 offered_berries = 0;
+
+instance_deactivate_object(self);

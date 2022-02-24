@@ -37,3 +37,5 @@ option[3,4] = "Buy";
 option[3,5] = "Back";
 requested_fish = 0;
 fish_price = 15;
+
+instance_deactivate_object(self);

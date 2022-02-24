@@ -15,3 +15,4 @@ option[1,4] = "Buy";
 option[1,5] = "Back";
 requested_parts = 0;
 parts_price = 10;
+instance_deactivate_object(self);

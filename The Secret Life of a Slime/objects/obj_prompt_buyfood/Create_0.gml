@@ -4,5 +4,5 @@ event_inherited()
 prompt_text = "buy food?";
 
 // to pause when menu is active
-paused = false;
-screenshot = -1;
+should_close_menu = false;
+

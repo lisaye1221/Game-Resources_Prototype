@@ -40,10 +40,7 @@ if (accept_key){
 					break;
 				// exit
 				case 2:
-					this_prompt = instance_find(obj_prompt_sell, 0);
-					if (this_prompt != noone){
-						this_prompt.paused = false;
-					}
+					obj_prompt_sell.should_close_menu = true;
 					break;}
 			break;
 		

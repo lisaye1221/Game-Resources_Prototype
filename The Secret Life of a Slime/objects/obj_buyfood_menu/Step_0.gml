@@ -47,10 +47,7 @@ if (accept_key){
 					break;
 				// exit
 				case 3:
-					this_prompt = instance_find(obj_prompt_buyfood, 0);
-					if (this_prompt != noone){
-						this_prompt.paused = false;
-					}
+					obj_prompt_buyfood.should_close_menu = true;
 					break;}
 			break;
 		

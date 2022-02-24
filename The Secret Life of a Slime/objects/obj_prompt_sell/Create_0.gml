@@ -4,5 +4,4 @@ event_inherited()
 prompt_text = "sell crops?";
 
 // to pause when menu is active
-paused = false;
-screenshot = -1;
+should_close_menu = false;
