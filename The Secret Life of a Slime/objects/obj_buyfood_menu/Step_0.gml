@@ -72,6 +72,7 @@ if (accept_key){
 				case 4:
 					global.gold -= (requested_wheat * wheat_price);
 					gain_item(global.item_list.wheat, requested_wheat);
+					audio_play_sound(sfx_transaction, 2, false);
 					requested_wheat = 0;
 					break;
 				// back
@@ -102,6 +103,7 @@ if (accept_key){
 				case 4:
 					global.gold -= (requested_berries * berry_price);
 					gain_item(global.item_list.berries, requested_berries);
+					audio_play_sound(sfx_transaction, 2, false);
 					requested_berries = 0;
 					break;
 				// back
@@ -132,6 +134,7 @@ if (accept_key){
 				case 4:
 					global.gold -= (requested_fish * fish_price);
 					gain_item(global.item_list.fish, requested_fish);
+					audio_play_sound(sfx_transaction, 2, false);
 					requested_fish = 0;
 					break;
 				// back

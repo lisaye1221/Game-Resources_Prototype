@@ -63,6 +63,7 @@ if (accept_key){
 				case 4:
 					global.gold -= (requested_parts * parts_price);
 					gain_item(global.item_list.parts, requested_parts);
+					audio_play_sound(sfx_transaction, 2, false);
 					requested_parts = 0;
 					break;
 				// sell

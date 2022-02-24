@@ -72,7 +72,7 @@ if not global.dead {
 			// adding crops to player's inventory & subtracting energy cost
 			gain_item(global.item_list.wheat, 8);
 			global.energy -= 10;
-		
+			audio_play_sound(sfx_crop_collect, 2, false);
 			// resetting all crops in scene so they will grow again
 			for (var i = 0; i < instance_number(obj_crop); i ++;)
 			{
@@ -95,6 +95,7 @@ if not global.dead {
 			if (this_machine.status == "empty" && 
 				get_item_count(global.item_list.wheat) >= this_machine.WHEAT_COST){
 				// take wheat from player, start timer, show progress bar
+				audio_play_sound(sfx_machine_operate, 2, false);
 				this_machine.amount_to_convert = this_machine.WHEAT_COST;
 				lose_item(global.item_list.wheat, 8);
 				this_machine.status = "busy";
@@ -124,15 +125,13 @@ if not global.dead {
 			} 
 		
 		
-			// TODO: repairing machine
-		
 		
 			else if (this_machine.status == "broken" && get_item_count(global.item_list.parts) >= 1){
 				// do something (take gold or parts or whatever from player and wait for repair)
 				
 				lose_item(global.item_list.parts, 1);
-				global.energy -= 10;
-				
+				global.energy -= this_machine.ENERGY_COST_TO_REPAIR;
+				audio_play_sound(sfx_machine_fix, 2, false);
 				// change status to "empty"
 				// change text
 				
@@ -151,6 +150,7 @@ if not global.dead {
 		berry_bush_id.has_berries = false;
 		// add 1 unit of berries to inventory
 		gain_one_item(global.item_list.berries);
+		audio_play_sound(sfx_collect_berries, 2, false);
 	}
 
 
