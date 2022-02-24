@@ -61,6 +61,9 @@ if (accept_key){
 					break;
 				// buy
 				case 4:
+					global.gold -= (requested_parts * parts_price);
+					gain_item(global.item_list.parts, requested_parts);
+					requested_parts = 0;
 					break;
 				// sell
 				case 5:

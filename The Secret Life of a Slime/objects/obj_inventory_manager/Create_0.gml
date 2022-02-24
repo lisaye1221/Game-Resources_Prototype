@@ -52,7 +52,13 @@ global.item_list =
 		spr_item_fish,
 		5,
 		0
-	)
+	),
+	parts: new create_item(
+		"Parts",
+		spr_item_parts,
+		1,
+		0
+	),
 }
 
 // create the inventory
