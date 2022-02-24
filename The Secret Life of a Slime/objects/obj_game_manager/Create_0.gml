@@ -50,3 +50,6 @@ TRANSFORMATION_COOLDOWN_TIME = 45;
 transformation_remaining = 0;
 transformation_cooldown = 0;
 
+global.player_in_shop = false;
+global.force_player_home = false;
+

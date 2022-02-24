@@ -49,6 +49,11 @@ if not global.dead {
 	if(x_speed == 0 && y_speed == 0){
 		image_index = 0;
 	}
+	
+	if (global.force_player_home) {
+		global.force_player_home = false;
+		forced_home(id);
+	}
 
 	// ** Interaction ** //
 	if(place_meeting(x, y, obj_prompt_town) && key_z){

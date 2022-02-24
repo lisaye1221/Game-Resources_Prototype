@@ -35,10 +35,16 @@ if(is_room_transition){
 }
 
 if(room == town){
-	transformation_remaining -= (1 / room_speed);	
-	if(transformation_remaining <= 0){
-		
-		forced_home(obj_player);
+	if (transformation_remaining >= 0) {
+		transformation_remaining -= (1 / room_speed);
+	}
+	else{
+		if (global.player_in_shop) {
+			global.force_player_home = true;
+		}
+		else {
+			forced_home(obj_player);
+		}
 	}
 }
 if(room == home){
