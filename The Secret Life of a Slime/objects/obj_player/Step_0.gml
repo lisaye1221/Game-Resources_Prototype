@@ -164,6 +164,9 @@ if not global.dead {
 				increase_energy(10);
 				lose_one_item(item);
 			break;
+			case global.item_list.fish.name:
+				increase_energy(6);
+				lose_one_item(item);
 			default:
 				return;
 		}
