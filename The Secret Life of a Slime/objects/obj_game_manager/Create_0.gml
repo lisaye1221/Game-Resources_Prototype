@@ -44,7 +44,7 @@ for(var i = 0; i < array_length(crop); i++){
 
 
 // ** Time Limit for Town ** //
-TOWN_TIME_LIMIT = 25; // seconds
+TOWN_TIME_LIMIT = 40; // seconds
 EXCEED_TIME_ENERGY_COST = 15;
 TRANSFORMATION_COOLDOWN_TIME = 45;
 transformation_remaining = 0;
